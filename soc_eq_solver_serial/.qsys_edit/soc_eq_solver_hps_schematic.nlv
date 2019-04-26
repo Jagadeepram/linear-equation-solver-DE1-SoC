@@ -1,0 +1,78 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst soc_eq_solver.System_PLL.reset_from_locked -pg 1
+preplace inst soc_eq_solver.System_PLL.sys_pll -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.timer -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.dcan0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.i2c1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.gpio0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.timer3 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.sysmgr -pg 1
+preplace inst soc_eq_solver.clock_bridge_0 -pg 1 -lvl 2 -y 240
+preplace inst soc_eq_solver.System_PLL -pg 1 -lvl 1 -y 390
+preplace inst soc_eq_solver.ARM_A9_HPS.axi_sdram -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.dcan1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.qspi -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.i2c2 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.gpio1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.i2c3 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.gpio2 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.hps_io.border -pg 1
+preplace inst soc_eq_solver -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst soc_eq_solver.ARM_A9_HPS.gmac0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.clk_0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.hps_io -pg 1
+preplace inst soc_eq_solver.Onchip_SRAM -pg 1 -lvl 3 -y 400
+preplace inst soc_eq_solver.ARM_A9_HPS.gmac1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.arm_gic_0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.f2s_periph_ref_clk -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.eosc1 -pg 1
+preplace inst soc_eq_solver.ready -pg 1 -lvl 3 -y 300
+preplace inst soc_eq_solver.ARM_A9_HPS.nand0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.fpgamgr -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.eosc2 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.fpga_interfaces -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.sdrctl -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.spim0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.dma -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.spim1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.wd_timer0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.wd_timer1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.uart0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.axi_ocram -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.sdmmc -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.uart1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.rstmgr -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.f2s_sdram_ref_clk -pg 1
+preplace inst soc_eq_solver.fifo_HPS_to_FPGA -pg 1 -lvl 3 -y 120
+preplace inst soc_eq_solver.ARM_A9_HPS.timer0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.L2 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.arm_a9_0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.bridges -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.scu -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.l3regs -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.usb0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.timer1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.arm_a9_1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS -pg 1 -lvl 2 -y 50
+preplace inst soc_eq_solver.ARM_A9_HPS.usb1 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.i2c0 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.timer2 -pg 1
+preplace inst soc_eq_solver.ARM_A9_HPS.clkmgr -pg 1
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)soc_eq_solver.system_pll_ref_clk,(SLAVE)System_PLL.ref_clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(MASTER)System_PLL.sdram_clk,(MASTER)soc_eq_solver.sdram_clk) 1 1 3 NJ 550 NJ 550 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)ARM_A9_HPS.memory,(SLAVE)soc_eq_solver.memory) 1 0 2 NJ 160 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)soc_eq_solver.hps_io,(SLAVE)ARM_A9_HPS.hps_io) 1 0 2 NJ 100 NJ
+preplace netloc FAN_OUT<net_container>soc_eq_solver</net_container>(MASTER)ARM_A9_HPS.h2f_axi_master,(SLAVE)Onchip_SRAM.s2,(SLAVE)fifo_HPS_to_FPGA.in) 1 2 1 770
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)soc_eq_solver.clock_bridge_0_in_clk,(SLAVE)clock_bridge_0.in_clk) 1 0 2 NJ 250 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)System_PLL.ref_reset,(SLAVE)soc_eq_solver.system_pll_ref_reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>soc_eq_solver</net_container>(SLAVE)fifo_HPS_to_FPGA.reset_out,(MASTER)ARM_A9_HPS.h2f_reset,(MASTER)System_PLL.reset_source,(SLAVE)Onchip_SRAM.reset2,(SLAVE)fifo_HPS_to_FPGA.reset_in,(SLAVE)Onchip_SRAM.reset1,(SLAVE)ready.reset) 1 1 2 NJ 400 750
+preplace netloc FAN_OUT<net_container>soc_eq_solver</net_container>(SLAVE)fifo_HPS_to_FPGA.clk_in,(SLAVE)Onchip_SRAM.clk2,(SLAVE)ARM_A9_HPS.h2f_axi_clock,(MASTER)System_PLL.sys_clk,(SLAVE)ARM_A9_HPS.f2h_axi_clock,(SLAVE)ARM_A9_HPS.h2f_lw_axi_clock) 1 1 2 440 430 810
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)ready.external_connection,(SLAVE)soc_eq_solver.ready_external_connection) 1 0 3 NJ 330 NJ 330 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)soc_eq_solver.fifo_hps_to_fpga_out,(SLAVE)fifo_HPS_to_FPGA.out) 1 0 3 NJ 210 NJ 210 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)Onchip_SRAM.s1,(SLAVE)soc_eq_solver.onchip_sram_s1) 1 0 3 NJ 490 NJ 490 NJ
+preplace netloc EXPORT<net_container>soc_eq_solver</net_container>(SLAVE)fifo_HPS_to_FPGA.out_csr,(SLAVE)soc_eq_solver.fifo_hps_to_fpga_out_csr) 1 0 3 NJ 230 NJ 230 NJ
+preplace netloc FAN_OUT<net_container>soc_eq_solver</net_container>(MASTER)clock_bridge_0.out_clk,(SLAVE)ready.clk,(SLAVE)fifo_HPS_to_FPGA.clk_out,(SLAVE)Onchip_SRAM.clk1) 1 2 1 830
+preplace netloc FAN_OUT<net_container>soc_eq_solver</net_container>(SLAVE)fifo_HPS_to_FPGA.in_csr,(SLAVE)ready.s1,(MASTER)ARM_A9_HPS.h2f_lw_axi_master) 1 2 1 790
+levelinfo -pg 1 0 170 1120
+levelinfo -hier soc_eq_solver 180 260 560 880 1030

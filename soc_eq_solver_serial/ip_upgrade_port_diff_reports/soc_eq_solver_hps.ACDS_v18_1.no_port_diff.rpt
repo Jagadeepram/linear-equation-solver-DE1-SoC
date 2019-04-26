@@ -1,0 +1,23 @@
+IP Ports Diff Report for soc_eq_solver_hps
+Thu Apr 18 20:11:59 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++--------------------------------------------------------------------------+
+; IP Information                                                           ;
++----------------------+---------------------------------------------------+
+; IP Variation Name    ; soc_eq_solver_hps                                 ;
+; Prior Version        ; ACDS_v18.0                                        ;
+; New Version          ; ACDS_v18.1                                        ;
+; New File             ; soc_eq_solver_hps/synthesis/soc_eq_solver_hps.vhd ;
+; Has Port Differences ; No                                                ;
++----------------------+---------------------------------------------------+
+
+

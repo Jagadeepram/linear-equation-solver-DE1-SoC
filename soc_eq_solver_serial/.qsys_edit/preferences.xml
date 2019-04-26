@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="175" />
+   <irq preferredWidth="47" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/DSP,Project/System,Project,Library,Library/Basic Functions" />
+ <window width="1936" height="1176" x="-8" y="-8" />
+ <generation synthesis="VHDL" simulation="VHDL" />
+</preferences>

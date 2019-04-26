@@ -1,0 +1,338 @@
+IP Upgrade report for soc_eq_solver
+Thu Apr 18 19:49:22 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Thu Apr 18 19:49:22 2019           ;
+; Quartus Prime Version        ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                ; soc_eq_solver                               ;
+; Top-level Entity Name        ; soc_eq_solver_system                        ;
+; Family                       ; Cyclone V                                   ;
++------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                                                                     ;
++-------------------+----------------+---------+---------------------------------------------------+------------------------+---------------------------------------------------+---------+
+; Entity Name       ; Component Name ; Version ; Original Source File                              ; Generation File Path   ; New Source File                                   ; Message ;
++-------------------+----------------+---------+---------------------------------------------------+------------------------+---------------------------------------------------+---------+
+; soc_eq_solver_hps ; Qsys           ; 18.0    ; soc_eq_solver_hps/synthesis/soc_eq_solver_hps.qip ; soc_eq_solver_hps.qsys ; soc_eq_solver_hps/synthesis/soc_eq_solver_hps.qip ;         ;
++-------------------+----------------+---------+---------------------------------------------------+------------------------+---------------------------------------------------+---------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "soc_eq_solver_hps.qsys" to "soc_eq_solver_hps.BAK.qsys"
+Info (11902): Backing up file "soc_eq_solver_hps/synthesis/soc_eq_solver_hps.vhd" to "soc_eq_solver_hps.BAK.vhd"
+Info (11837): Started upgrading IP component Qsys with file "soc_eq_solver_hps.qsys"
+Info: 2019.04.18.19:45:41 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2019.04.18.19:45:42 Info: Finished upgrading the ip cores
+Info: 2019.04.18.19:46:06 Info: Saving generation log to D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps
+Info: 2019.04.18.19:46:06 Info: Starting: Create simulation model
+Info: 2019.04.18.19:46:06 Info: qsys-generate "D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps.qsys" --simulation=VHDL --allow-mixed-language-simulation --output-directory="D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps\simulation" --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2019.04.18.19:46:06 Info: Loading soc_eq_solver_parallel
+Info: 2019.04.18.19:46:07 Info: Reading input file
+Info: 2019.04.18.19:46:07 Info: Adding ARM_A9_HPS [altera_hps 18.1]
+Info: 2019.04.18.19:46:07 Info: Parameterizing module ARM_A9_HPS
+Info: 2019.04.18.19:46:07 Info: Adding Onchip_SRAM [altera_avalon_onchip_memory2 18.1]
+Info: 2019.04.18.19:46:07 Info: Parameterizing module Onchip_SRAM
+Info: 2019.04.18.19:46:07 Info: Adding System_PLL [altera_up_avalon_sys_sdram_pll 18.0]
+Info: 2019.04.18.19:46:07 Info: Parameterizing module System_PLL
+Info: 2019.04.18.19:46:07 Info: Adding clock_bridge_0 [altera_clock_bridge 18.1]
+Info: 2019.04.18.19:46:07 Info: Parameterizing module clock_bridge_0
+Info: 2019.04.18.19:46:07 Info: Adding fifo_HPS_to_FPGA [altera_avalon_fifo 18.1]
+Info: 2019.04.18.19:46:07 Info: Parameterizing module fifo_HPS_to_FPGA
+Info: 2019.04.18.19:46:07 Info: Adding ready [altera_avalon_pio 18.1]
+Info: 2019.04.18.19:46:07 Info: Parameterizing module ready
+Info: 2019.04.18.19:46:07 Info: Building connections
+Info: 2019.04.18.19:46:07 Info: Parameterizing connections
+Info: 2019.04.18.19:46:07 Info: Validating
+Info: 2019.04.18.19:46:14 Info: Done reading input file
+Info: 2019.04.18.19:46:17 Info: soc_eq_solver_hps.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2019.04.18.19:46:17 Info: soc_eq_solver_hps.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2019.04.18.19:46:17 Warning: soc_eq_solver_hps.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2019.04.18.19:46:17 Warning: soc_eq_solver_hps.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2019.04.18.19:46:17 Info: soc_eq_solver_hps.System_PLL: Refclk Freq: 50.0
+Warning: 2019.04.18.19:46:17 Warning: soc_eq_solver_hps.: You have exported the interface fifo_HPS_to_FPGA.out but not its associated reset interface.  Export the driver(s) of fifo_HPS_to_FPGA.reset_out
+Warning: 2019.04.18.19:46:17 Warning: soc_eq_solver_hps.: You have exported the interface fifo_HPS_to_FPGA.out_csr but not its associated reset interface.  Export the driver(s) of fifo_HPS_to_FPGA.reset_out
+Warning: 2019.04.18.19:46:17 Warning: soc_eq_solver_hps.: You have exported the interface Onchip_SRAM.s1 but not its associated reset interface.  Export the driver(s) of Onchip_SRAM.reset1
+Info: 2019.04.18.19:46:19 Info: soc_eq_solver_hps: Generating soc_eq_solver_hps "soc_eq_solver_hps" for SIM_VHDL
+Info: 2019.04.18.19:46:26 Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: 2019.04.18.19:46:26 Info: Inserting clock-crossing logic between cmd_demux_001.src1 and cmd_mux_001.sink1
+Info: 2019.04.18.19:46:26 Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: 2019.04.18.19:46:26 Info: Inserting clock-crossing logic between rsp_demux_001.src1 and rsp_mux_001.sink1
+Warning: 2019.04.18.19:46:27 Warning: ARM_A9_HPS.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: 2019.04.18.19:46:27 Warning: ARM_A9_HPS.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: 2019.04.18.19:46:27 Warning: ARM_A9_HPS.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: 2019.04.18.19:46:27 Warning: ARM_A9_HPS.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: 2019.04.18.19:46:32 Info: ARM_A9_HPS: "Running  for module: ARM_A9_HPS"
+Info: 2019.04.18.19:46:33 Info: ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2019.04.18.19:46:33 Info: ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2019.04.18.19:46:33 Warning: ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2019.04.18.19:46:33 Warning: ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2019.04.18.19:46:36 Info: ARM_A9_HPS: "soc_eq_solver_hps" instantiated altera_hps "ARM_A9_HPS"
+Info: 2019.04.18.19:46:36 Info: Onchip_SRAM: Starting RTL generation for module 'soc_eq_solver_hps_Onchip_SRAM'
+Info: 2019.04.18.19:46:36 Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_eq_solver_hps_Onchip_SRAM --dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0002_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0002_Onchip_SRAM_gen//soc_eq_solver_hps_Onchip_SRAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0002_Onchip_SRAM_gen
+Info: 2019.04.18.19:46:38 Info: Onchip_SRAM: Done RTL generation for module 'soc_eq_solver_hps_Onchip_SRAM'
+Info: 2019.04.18.19:46:38 Info: Onchip_SRAM: "soc_eq_solver_hps" instantiated altera_avalon_onchip_memory2 "Onchip_SRAM"
+Info: 2019.04.18.19:46:39 Info: System_PLL: "soc_eq_solver_hps" instantiated altera_up_avalon_sys_sdram_pll "System_PLL"
+Info: 2019.04.18.19:46:39 Info: fifo_HPS_to_FPGA: Starting RTL generation for module 'soc_eq_solver_hps_fifo_HPS_to_FPGA'
+Info: 2019.04.18.19:46:39 Info: fifo_HPS_to_FPGA:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=soc_eq_solver_hps_fifo_HPS_to_FPGA --dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0003_fifo_HPS_to_FPGA_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0003_fifo_HPS_to_FPGA_gen//soc_eq_solver_hps_fifo_HPS_to_FPGA_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0003_fifo_HPS_to_FPGA_gen
+Info: 2019.04.18.19:46:40 Info: fifo_HPS_to_FPGA: Done RTL generation for module 'soc_eq_solver_hps_fifo_HPS_to_FPGA'
+Info: 2019.04.18.19:46:40 Info: fifo_HPS_to_FPGA: "soc_eq_solver_hps" instantiated altera_avalon_fifo "fifo_HPS_to_FPGA"
+Info: 2019.04.18.19:46:40 Info: ready: Starting RTL generation for module 'soc_eq_solver_hps_ready'
+Info: 2019.04.18.19:46:40 Info: ready:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_eq_solver_hps_ready --dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0004_ready_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0004_ready_gen//soc_eq_solver_hps_ready_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0004_ready_gen
+Info: 2019.04.18.19:46:41 Info: ready: Done RTL generation for module 'soc_eq_solver_hps_ready'
+Info: 2019.04.18.19:46:41 Info: ready: "soc_eq_solver_hps" instantiated altera_avalon_pio "ready"
+Info: 2019.04.18.19:46:43 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:46:43 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:46:44 Info: mm_interconnect_0: "soc_eq_solver_hps" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2019.04.18.19:46:46 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:46:46 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:46:47 Info: mm_interconnect_1: "soc_eq_solver_hps" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: 2019.04.18.19:46:47 Info: irq_mapper: "soc_eq_solver_hps" instantiated altera_irq_mapper "irq_mapper"
+Info: 2019.04.18.19:46:47 Info: rst_controller: "soc_eq_solver_hps" instantiated altera_reset_controller "rst_controller"
+Info: 2019.04.18.19:46:47 Info: fpga_interfaces: "ARM_A9_HPS" instantiated altera_interface_generator "fpga_interfaces"
+Info: 2019.04.18.19:46:48 Info: hps_io: "ARM_A9_HPS" instantiated altera_hps_io "hps_io"
+Info: 2019.04.18.19:46:48 Info: sys_pll: Generating simgen model
+Info: 2019.04.18.19:47:12 Info: sys_pll: Simgen was successful
+Info: 2019.04.18.19:47:12 Info: sys_pll: "System_PLL" instantiated altera_pll "sys_pll"
+Info: 2019.04.18.19:47:12 Info: reset_from_locked: "System_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: 2019.04.18.19:47:12 Info: fifo_HPS_to_FPGA_in_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "fifo_HPS_to_FPGA_in_translator"
+Info: 2019.04.18.19:47:12 Info: ARM_A9_HPS_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "ARM_A9_HPS_h2f_axi_master_agent"
+Info: 2019.04.18.19:47:12 Info: fifo_HPS_to_FPGA_in_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "fifo_HPS_to_FPGA_in_agent"
+Info: 2019.04.18.19:47:12 Info: fifo_HPS_to_FPGA_in_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "fifo_HPS_to_FPGA_in_agent_rsp_fifo"
+Info: 2019.04.18.19:47:12 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: 2019.04.18.19:47:13 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: 2019.04.18.19:47:13 Info: ARM_A9_HPS_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "ARM_A9_HPS_h2f_axi_master_wr_limiter"
+Info: 2019.04.18.19:47:13 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:13 Info: fifo_HPS_to_FPGA_in_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "fifo_HPS_to_FPGA_in_burst_adapter"
+Info: 2019.04.18.19:47:13 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:13 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:13 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2019.04.18.19:47:13 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2019.04.18.19:47:13 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2019.04.18.19:47:13 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2019.04.18.19:47:13 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:13 Info: fifo_HPS_to_FPGA_in_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "fifo_HPS_to_FPGA_in_rsp_width_adapter"
+Info: 2019.04.18.19:47:13 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:13 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: 2019.04.18.19:47:14 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: 2019.04.18.19:47:14 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: 2019.04.18.19:47:14 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2019.04.18.19:47:14 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2019.04.18.19:47:14 Info: rsp_demux_001: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: 2019.04.18.19:47:14 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: crosser: "mm_interconnect_1" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation/submodules
+Info: 2019.04.18.19:47:14 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: 2019.04.18.19:47:14 Info: soc_eq_solver_hps: Done "soc_eq_solver_hps" with 38 modules, 71 files
+Info: 2019.04.18.19:47:14 Info: qsys-generate succeeded.
+Info: 2019.04.18.19:47:14 Info: Finished: Create simulation model
+Info: 2019.04.18.19:47:14 Info: Starting: Create Modelsim Project.
+Info: 2019.04.18.19:47:14 Info: Doing: ip-make-simscript --spd=D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps\soc_eq_solver_hps.spd --output-directory=D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation
+Info: 2019.04.18.19:47:17 Info: Generating the following file(s) for MODELSIM simulator in D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation
+Info: 2019.04.18.19:47:17 Info:     mentor
+Info: 2019.04.18.19:47:17 Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib
+Info: 2019.04.18.19:47:17 Info: Generating the following file(s) for VCSMX simulator in D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation
+Info: 2019.04.18.19:47:17 Info:     synopsys/vcsmx
+Info: 2019.04.18.19:47:17 Info:     synopsys/vcsmx
+Info: 2019.04.18.19:47:17 Info: Generating the following file(s) for NCSIM simulator in D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation
+Info: 2019.04.18.19:47:17 Info:     cadence
+Info: 2019.04.18.19:47:17 Info:     cadence
+Info: 2019.04.18.19:47:17 Info:     cadence
+Info: 2019.04.18.19:47:17 Info:     32 .cds.lib files in cadence/cds_libs
+Info: 2019.04.18.19:47:17 Info: Generating the following file(s) for RIVIERA simulator in D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation
+Info: 2019.04.18.19:47:17 Info:     aldec
+Info: 2019.04.18.19:47:17 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/simulation
+Info: 2019.04.18.19:47:17 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2019.04.18.19:47:17 Info: Finished: Create Modelsim Project.
+Info: 2019.04.18.19:47:17 Info: Starting: Create block symbol file (.bsf)
+Info: 2019.04.18.19:47:17 Info: qsys-generate "D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps.qsys" --block-symbol-file --output-directory="D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps" --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2019.04.18.19:47:17 Info: Loading soc_eq_solver_parallel
+Info: 2019.04.18.19:47:18 Info: Reading input file
+Info: 2019.04.18.19:47:18 Info: Adding ARM_A9_HPS [altera_hps 18.1]
+Info: 2019.04.18.19:47:18 Info: Parameterizing module ARM_A9_HPS
+Info: 2019.04.18.19:47:18 Info: Adding Onchip_SRAM [altera_avalon_onchip_memory2 18.1]
+Info: 2019.04.18.19:47:18 Info: Parameterizing module Onchip_SRAM
+Info: 2019.04.18.19:47:18 Info: Adding System_PLL [altera_up_avalon_sys_sdram_pll 18.0]
+Info: 2019.04.18.19:47:18 Info: Parameterizing module System_PLL
+Info: 2019.04.18.19:47:18 Info: Adding clock_bridge_0 [altera_clock_bridge 18.1]
+Info: 2019.04.18.19:47:18 Info: Parameterizing module clock_bridge_0
+Info: 2019.04.18.19:47:18 Info: Adding fifo_HPS_to_FPGA [altera_avalon_fifo 18.1]
+Info: 2019.04.18.19:47:18 Info: Parameterizing module fifo_HPS_to_FPGA
+Info: 2019.04.18.19:47:18 Info: Adding ready [altera_avalon_pio 18.1]
+Info: 2019.04.18.19:47:18 Info: Parameterizing module ready
+Info: 2019.04.18.19:47:18 Info: Building connections
+Info: 2019.04.18.19:47:18 Info: Parameterizing connections
+Info: 2019.04.18.19:47:18 Info: Validating
+Info: 2019.04.18.19:47:31 Info: Done reading input file
+Info: 2019.04.18.19:47:37 Info: soc_eq_solver_hps.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2019.04.18.19:47:37 Info: soc_eq_solver_hps.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2019.04.18.19:47:37 Warning: soc_eq_solver_hps.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2019.04.18.19:47:37 Warning: soc_eq_solver_hps.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2019.04.18.19:47:37 Info: soc_eq_solver_hps.System_PLL: Refclk Freq: 50.0
+Warning: 2019.04.18.19:47:37 Warning: soc_eq_solver_hps.: You have exported the interface fifo_HPS_to_FPGA.out but not its associated reset interface.  Export the driver(s) of fifo_HPS_to_FPGA.reset_out
+Warning: 2019.04.18.19:47:37 Warning: soc_eq_solver_hps.: You have exported the interface fifo_HPS_to_FPGA.out_csr but not its associated reset interface.  Export the driver(s) of fifo_HPS_to_FPGA.reset_out
+Warning: 2019.04.18.19:47:37 Warning: soc_eq_solver_hps.: You have exported the interface Onchip_SRAM.s1 but not its associated reset interface.  Export the driver(s) of Onchip_SRAM.reset1
+Info: 2019.04.18.19:47:39 Info: qsys-generate succeeded.
+Info: 2019.04.18.19:47:39 Info: Finished: Create block symbol file (.bsf)
+Info: 2019.04.18.19:47:39 Info:
+Info: 2019.04.18.19:47:39 Info: Starting: Create HDL design files for synthesis
+Info: 2019.04.18.19:47:39 Info: qsys-generate "D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps.qsys" --synthesis=VHDL --output-directory="D:\personal\report\master thesis\design_files\soc_eq_solver_parallel\soc_eq_solver_hps\synthesis" --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2019.04.18.19:47:40 Info: Loading soc_eq_solver_parallel
+Info: 2019.04.18.19:47:40 Info: Reading input file
+Info: 2019.04.18.19:47:40 Info: Adding ARM_A9_HPS [altera_hps 18.1]
+Info: 2019.04.18.19:47:40 Info: Parameterizing module ARM_A9_HPS
+Info: 2019.04.18.19:47:40 Info: Adding Onchip_SRAM [altera_avalon_onchip_memory2 18.1]
+Info: 2019.04.18.19:47:40 Info: Parameterizing module Onchip_SRAM
+Info: 2019.04.18.19:47:40 Info: Adding System_PLL [altera_up_avalon_sys_sdram_pll 18.0]
+Info: 2019.04.18.19:47:40 Info: Parameterizing module System_PLL
+Info: 2019.04.18.19:47:40 Info: Adding clock_bridge_0 [altera_clock_bridge 18.1]
+Info: 2019.04.18.19:47:40 Info: Parameterizing module clock_bridge_0
+Info: 2019.04.18.19:47:40 Info: Adding fifo_HPS_to_FPGA [altera_avalon_fifo 18.1]
+Info: 2019.04.18.19:47:40 Info: Parameterizing module fifo_HPS_to_FPGA
+Info: 2019.04.18.19:47:40 Info: Adding ready [altera_avalon_pio 18.1]
+Info: 2019.04.18.19:47:40 Info: Parameterizing module ready
+Info: 2019.04.18.19:47:40 Info: Building connections
+Info: 2019.04.18.19:47:40 Info: Parameterizing connections
+Info: 2019.04.18.19:47:40 Info: Validating
+Info: 2019.04.18.19:47:55 Info: Done reading input file
+Info: 2019.04.18.19:48:02 Info: soc_eq_solver_hps.ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2019.04.18.19:48:02 Info: soc_eq_solver_hps.ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2019.04.18.19:48:02 Warning: soc_eq_solver_hps.ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2019.04.18.19:48:02 Warning: soc_eq_solver_hps.ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2019.04.18.19:48:02 Info: soc_eq_solver_hps.System_PLL: Refclk Freq: 50.0
+Warning: 2019.04.18.19:48:02 Warning: soc_eq_solver_hps.: You have exported the interface fifo_HPS_to_FPGA.out but not its associated reset interface.  Export the driver(s) of fifo_HPS_to_FPGA.reset_out
+Warning: 2019.04.18.19:48:02 Warning: soc_eq_solver_hps.: You have exported the interface fifo_HPS_to_FPGA.out_csr but not its associated reset interface.  Export the driver(s) of fifo_HPS_to_FPGA.reset_out
+Warning: 2019.04.18.19:48:02 Warning: soc_eq_solver_hps.: You have exported the interface Onchip_SRAM.s1 but not its associated reset interface.  Export the driver(s) of Onchip_SRAM.reset1
+Info: 2019.04.18.19:48:06 Info: soc_eq_solver_hps: Generating soc_eq_solver_hps "soc_eq_solver_hps" for QUARTUS_SYNTH
+Info: 2019.04.18.19:48:16 Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: 2019.04.18.19:48:16 Info: Inserting clock-crossing logic between cmd_demux_001.src1 and cmd_mux_001.sink1
+Info: 2019.04.18.19:48:16 Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: 2019.04.18.19:48:16 Info: Inserting clock-crossing logic between rsp_demux_001.src1 and rsp_mux_001.sink1
+Warning: 2019.04.18.19:48:17 Warning: ARM_A9_HPS.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: 2019.04.18.19:48:17 Warning: ARM_A9_HPS.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: 2019.04.18.19:48:17 Warning: ARM_A9_HPS.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: 2019.04.18.19:48:17 Warning: ARM_A9_HPS.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: 2019.04.18.19:48:26 Info: ARM_A9_HPS: "Running  for module: ARM_A9_HPS"
+Info: 2019.04.18.19:48:26 Info: ARM_A9_HPS: HPS Main PLL counter settings: n = 0  m = 73
+Info: 2019.04.18.19:48:27 Info: ARM_A9_HPS: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: 2019.04.18.19:48:27 Warning: ARM_A9_HPS: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: 2019.04.18.19:48:27 Warning: ARM_A9_HPS: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: 2019.04.18.19:48:29 Info: ARM_A9_HPS: "soc_eq_solver_hps" instantiated altera_hps "ARM_A9_HPS"
+Info: 2019.04.18.19:48:29 Info: Onchip_SRAM: Starting RTL generation for module 'soc_eq_solver_hps_Onchip_SRAM'
+Info: 2019.04.18.19:48:29 Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_eq_solver_hps_Onchip_SRAM --dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0034_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0034_Onchip_SRAM_gen/
+Info: 2019.04.18.19:48:30 Info: Onchip_SRAM: Done RTL generation for module 'soc_eq_solver_hps_Onchip_SRAM'
+Info: 2019.04.18.19:48:30 Info: Onchip_SRAM: "soc_eq_solver_hps" instantiated altera_avalon_onchip_memory2 "Onchip_SRAM"
+Info: 2019.04.18.19:48:31 Info: System_PLL: "soc_eq_solver_hps" instantiated altera_up_avalon_sys_sdram_pll "System_PLL"
+Info: 2019.04.18.19:48:31 Info: fifo_HPS_to_FPGA: Starting RTL generation for module 'soc_eq_solver_hps_fifo_HPS_to_FPGA'
+Info: 2019.04.18.19:48:31 Info: fifo_HPS_to_FPGA:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_fifo/generate_rtl.pl --name=soc_eq_solver_hps_fifo_HPS_to_FPGA --dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0035_fifo_HPS_to_FPGA_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0035_fifo_HPS_to_FPGA_gen/
+Info: 2019.04.18.19:48:32 Info: fifo_HPS_to_FPGA: Done RTL generation for module 'soc_eq_solver_hps_fifo_HPS_to_FPGA'
+Info: 2019.04.18.19:48:32 Info: fifo_HPS_to_FPGA: "soc_eq_solver_hps" instantiated altera_avalon_fifo "fifo_HPS_to_FPGA"
+Info: 2019.04.18.19:48:32 Info: ready: Starting RTL generation for module 'soc_eq_solver_hps_ready'
+Info: 2019.04.18.19:48:32 Info: ready:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_eq_solver_hps_ready --dir=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0036_ready_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/jramg/AppData/Local/Temp/alt8004_5603926034818137412.dir/0036_ready_gen/
+Info: 2019.04.18.19:48:33 Info: ready: Done RTL generation for module 'soc_eq_solver_hps_ready'
+Info: 2019.04.18.19:48:33 Info: ready: "soc_eq_solver_hps" instantiated altera_avalon_pio "ready"
+Info: 2019.04.18.19:48:34 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:48:34 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:48:36 Info: mm_interconnect_0: "soc_eq_solver_hps" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2019.04.18.19:48:37 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:48:37 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2019.04.18.19:48:38 Info: mm_interconnect_1: "soc_eq_solver_hps" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: 2019.04.18.19:48:38 Info: irq_mapper: "soc_eq_solver_hps" instantiated altera_irq_mapper "irq_mapper"
+Info: 2019.04.18.19:48:38 Info: rst_controller: "soc_eq_solver_hps" instantiated altera_reset_controller "rst_controller"
+Info: 2019.04.18.19:48:39 Info: fpga_interfaces: "ARM_A9_HPS" instantiated altera_interface_generator "fpga_interfaces"
+Info: 2019.04.18.19:48:39 Info: hps_io: "ARM_A9_HPS" instantiated altera_hps_io "hps_io"
+Info: 2019.04.18.19:48:39 Info: sys_pll: "System_PLL" instantiated altera_pll "sys_pll"
+Info: 2019.04.18.19:48:39 Info: reset_from_locked: "System_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: 2019.04.18.19:48:39 Info: fifo_HPS_to_FPGA_in_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "fifo_HPS_to_FPGA_in_translator"
+Info: 2019.04.18.19:48:39 Info: ARM_A9_HPS_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "ARM_A9_HPS_h2f_axi_master_agent"
+Info: 2019.04.18.19:48:39 Info: fifo_HPS_to_FPGA_in_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "fifo_HPS_to_FPGA_in_agent"
+Info: 2019.04.18.19:48:39 Info: fifo_HPS_to_FPGA_in_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "fifo_HPS_to_FPGA_in_agent_rsp_fifo"
+Info: 2019.04.18.19:48:40 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: 2019.04.18.19:48:40 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: 2019.04.18.19:48:40 Info: ARM_A9_HPS_h2f_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "ARM_A9_HPS_h2f_axi_master_wr_limiter"
+Info: 2019.04.18.19:48:40 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:40 Info: fifo_HPS_to_FPGA_in_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "fifo_HPS_to_FPGA_in_burst_adapter"
+Info: 2019.04.18.19:48:40 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:40 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:40 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2019.04.18.19:48:40 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2019.04.18.19:48:40 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2019.04.18.19:48:40 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2019.04.18.19:48:40 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:40 Info: fifo_HPS_to_FPGA_in_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "fifo_HPS_to_FPGA_in_rsp_width_adapter"
+Info: 2019.04.18.19:48:40 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:40 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:40 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: 2019.04.18.19:48:41 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: 2019.04.18.19:48:41 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: 2019.04.18.19:48:41 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2019.04.18.19:48:41 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2019.04.18.19:48:41 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:41 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2019.04.18.19:48:41 Info: rsp_demux_001: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: 2019.04.18.19:48:41 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2019.04.18.19:48:41 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:48:41 Info: crosser: "mm_interconnect_1" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: 2019.04.18.19:48:41 Info: Reusing file D:/personal/report/master thesis/design_files/soc_eq_solver_parallel/soc_eq_solver_hps/synthesis/submodules
+Info: 2019.04.18.19:49:14 Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: 2019.04.18.19:49:15 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: 2019.04.18.19:49:15 Info: soc_eq_solver_hps: Done "soc_eq_solver_hps" with 38 modules, 102 files
+Info: 2019.04.18.19:49:16 Info: qsys-generate succeeded.
+Info: 2019.04.18.19:49:16 Info: Finished: Create HDL design files for synthesis
+Info (11131): Completed upgrading IP component Qsys with file "soc_eq_solver_hps.qsys"
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4950 megabytes
+    Info: Processing ended: Thu Apr 18 19:49:29 2019
+    Info: Elapsed time: 00:04:34
+    Info: Total CPU time (on all processors): 00:05:34
+
+

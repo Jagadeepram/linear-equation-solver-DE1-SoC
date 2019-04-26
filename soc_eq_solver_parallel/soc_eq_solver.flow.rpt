@@ -1,0 +1,164 @@
+Flow report for soc_eq_solver
+Fri Apr 19 18:21:58 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Fri Apr 19 18:20:34 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; soc_eq_solver                               ;
+; Top-level Entity Name           ; soc_eq_solver_system                        ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 17,427 / 32,070 ( 54 % )                    ;
+; Total registers                 ; 12275                                       ;
+; Total pins                      ; 323 / 457 ( 71 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 24,576 / 4,065,280 ( < 1 % )                ;
+; Total DSP Blocks                ; 84 / 87 ( 97 % )                            ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
+; Total DLLs                      ; 1 / 4 ( 25 % )                              ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/19/2019 18:08:01 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; soc_eq_solver       ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+--------------------------------------------+------------+
+; Assignment Name                     ; Value                                                                           ; Default Value ; Entity Name                                ; Section Id ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+--------------------------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 255543645837610.155569007514108                                                 ; --            ; --                                         ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/system.pre.h                   ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_ISW_FILE                        ; soc_eq_solver_hps/synthesis/submodules/hps.pre.xml                              ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; HPS_PARTITION                       ; On                                                                              ; --            ; soc_eq_solver_hps_ARM_A9_HPS_hps_io_border ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                              ; --            ; --                                         ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                               ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/../soc_eq_solver_hps.cmp                            ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/../../D                                             ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/soc_eq_solver_hps_ARM_A9_HPS_hps.svd                ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/../../soc_eq_solver_hps.qsys                        ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/system.pre.h                   ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; --                                         ; --         ;
+; MISC_FILE                           ; soc_eq_solver_hps/synthesis/submodules/hps.pre.xml                              ; --            ; --                                         ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                                                             ; --            ; --                                         ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                          ; --            ; soc_eq_solver_system                       ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                          ; --            ; soc_eq_solver_system                       ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                          ; --            ; soc_eq_solver_system                       ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                             ; --            ; --                                         ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                           ; --            ; --                                         ; --         ;
+; SLD_FILE                            ; soc_eq_solver_hps/synthesis/soc_eq_solver_hps.regmap                            ; --            ; --                                         ; --         ;
+; SLD_FILE                            ; soc_eq_solver_hps/synthesis/soc_eq_solver_hps.debuginfo                         ; --            ; --                                         ; --         ;
+; SLD_INFO                            ; QSYS_NAME soc_eq_solver_hps HAS_SOPCINFO 1 GENERATION_ID 1555609682             ; --            ; soc_eq_solver_hps                          ; --         ;
+; SOPCINFO_FILE                       ; soc_eq_solver_hps/synthesis/../../soc_eq_solver_hps.sopcinfo                    ; --            ; --                                         ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                              ; --            ; --                                         ; --         ;
+; TOP_LEVEL_ENTITY                    ; soc_eq_solver_system                                                            ; soc_eq_solver ; --                                         ; --         ;
++-------------------------------------+---------------------------------------------------------------------------------+---------------+--------------------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:34     ; 2.1                     ; 5496 MB             ; 00:02:51                           ;
+; Fitter               ; 00:07:25     ; 1.3                     ; 7931 MB             ; 00:20:53                           ;
+; Assembler            ; 00:00:28     ; 1.0                     ; 5190 MB             ; 00:00:26                           ;
+; Timing Analyzer      ; 00:01:22     ; 2.3                     ; 6124 MB             ; 00:02:47                           ;
+; Total                ; 00:10:49     ; --                      ; --                  ; 00:26:57                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; SEGOT-L1901023   ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; SEGOT-L1901023   ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; SEGOT-L1901023   ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; SEGOT-L1901023   ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off soc_eq_solver -c soc_eq_solver
+quartus_fit --read_settings_files=off --write_settings_files=off soc_eq_solver -c soc_eq_solver
+quartus_asm --read_settings_files=off --write_settings_files=off soc_eq_solver -c soc_eq_solver
+quartus_sta soc_eq_solver -c soc_eq_solver
+
+
+

@@ -1,0 +1,331 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.soc_eq_solver_pack.all;
+
+ENTITY soc_eq_solver_system IS
+	PORT(
+
+	---------FPGA Connections-------------
+	CLOCK_50:  IN STD_LOGIC;
+	CLOCK2_50: IN STD_LOGIC;
+	CLOCK3_50: IN STD_LOGIC;
+	CLOCK4_50: IN STD_LOGIC;
+
+	-- ADC---------------
+	ADC_CS_N :  INOUT STD_LOGIC;
+	ADC_DIN  :  OUT STD_LOGIC;
+	ADC_DOUT :  IN STD_LOGIC;
+	ADC_SCLK :  OUT STD_LOGIC;
+
+	-- AUDIO---------------
+	AUD_ADCDAT   : IN STD_LOGIC;
+	AUD_ADCLRCK  : INOUT STD_LOGIC;
+	AUD_BCLK     : INOUT STD_LOGIC;
+	AUD_DACDAT   : OUT STD_LOGIC;
+	AUD_DACLRCK  : INOUT STD_LOGIC;
+	AUD_XCK      : OUT STD_LOGIC;
+
+	-- SDRAM---------------
+	DRAM_ADDR    : OUT STD_LOGIC_VECTOR(12 downto 0);
+	DRAM_BA      : OUT STD_LOGIC_VECTOR(1 downto 0);
+	DRAM_CAS_N   : OUT STD_LOGIC;
+	DRAM_CKE     : OUT STD_LOGIC;
+	DRAM_CLK     : OUT STD_LOGIC;
+	DRAM_CS_N    : OUT STD_LOGIC;
+	DRAM_DQ      : INOUT STD_LOGIC_VECTOR(15 downto 0);
+	DRAM_LDQM    : OUT STD_LOGIC;
+	DRAM_RAS_N   : OUT STD_LOGIC;
+	DRAM_UDQM    : OUT STD_LOGIC;
+	DRAM_WE_N    : OUT STD_LOGIC;
+
+	-- I2C---------------
+	FPGA_I2C_SCLK : OUT STD_LOGIC;
+	FPGA_I2C_SDAT : INOUT STD_LOGIC;
+
+	-- 40- PIN header---------------
+	GPIO_0 : INOUT STD_LOGIC_VECTOR(35 downto 0);
+	GPIO_1 : INOUT STD_LOGIC_VECTOR(35 downto 0);
+
+	-- Seven Segment Display---------------
+	HEX0 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 downto 0);
+
+	-- IR --------------
+	IRDA_RXD : IN STD_LOGIC;
+	IRDA_TXD : OUT STD_LOGIC;
+
+	-- Pushbuttons--
+	KEY : IN STD_LOGIC_VECTOR(3 downto 0);
+	-- LEDs--
+	LEDR : OUT STD_LOGIC_VECTOR(9 downto 0);
+	-- Slider Switches
+	SW : IN STD_LOGIC_VECTOR(9 downto 0);
+	---------HPS Connections---------------
+
+	HPS_DDR3_ADDR:OUT STD_LOGIC_VECTOR(14 downto 0);
+	HPS_DDR3_BA: OUT STD_LOGIC_VECTOR(2 downto 0);
+	HPS_DDR3_CAS_N: OUT STD_LOGIC;
+	HPS_DDR3_CKE:OUT STD_LOGIC;
+	HPS_DDR3_CK_N: OUT STD_LOGIC;
+	HPS_DDR3_CK_P: OUT STD_LOGIC;
+	HPS_DDR3_CS_N: OUT STD_LOGIC;
+	HPS_DDR3_DM: OUT STD_LOGIC_VECTOR(3 downto 0);
+	HPS_DDR3_DQ: INOUT STD_LOGIC_VECTOR(31 downto 0);
+	HPS_DDR3_DQS_N: INOUT STD_LOGIC_VECTOR(3 downto 0);
+	HPS_DDR3_DQS_P: INOUT STD_LOGIC_VECTOR(3 downto 0);
+	HPS_DDR3_ODT: OUT STD_LOGIC;
+	HPS_DDR3_RAS_N: OUT STD_LOGIC;
+	HPS_DDR3_RESET_N: OUT  STD_LOGIC;
+	HPS_DDR3_RZQ: IN STD_LOGIC;
+	HPS_DDR3_WE_N: OUT STD_LOGIC;
+
+	HPS_ENET_GTX_CLK: OUT STD_LOGIC;
+	HPS_ENET_INT_N:INOUT STD_LOGIC;
+	HPS_ENET_MDC:OUT STD_LOGIC;
+	HPS_ENET_MDIO:INOUT STD_LOGIC;
+	HPS_ENET_RX_CLK: IN STD_LOGIC;
+	HPS_ENET_RX_DATA: IN STD_LOGIC_VECTOR(3 downto 0);
+	HPS_ENET_RX_DV: IN STD_LOGIC;
+	HPS_ENET_TX_DATA: OUT STD_LOGIC_VECTOR(3 downto 0);
+	HPS_ENET_TX_EN: OUT STD_LOGIC;
+
+	HPS_FLASH_DATA: INOUT STD_LOGIC_VECTOR(3 downto 0);
+	HPS_FLASH_DCLK: OUT STD_LOGIC;
+	HPS_FLASH_NCSO: OUT STD_LOGIC; 
+
+	HPS_GSENSOR_INT:INOUT STD_LOGIC;
+	
+	HPS_GPIO: INOUT STD_LOGIC_VECTOR(1 downto 0);
+
+	HPS_I2C_CONTROL :INOUT STD_LOGIC;
+	HPS_I2C1_SCLK :INOUT STD_LOGIC;
+	HPS_I2C1_SDAT :INOUT STD_LOGIC;
+	HPS_I2C2_SCLK :INOUT STD_LOGIC;
+	HPS_I2C2_SDAT :INOUT STD_LOGIC;
+
+	HPS_KEY: INOUT STD_LOGIC;
+
+	HPS_LED : INOUT STD_LOGIC;
+
+	HPS_SD_CLK: OUT STD_LOGIC;
+	HPS_SD_CMD: INOUT STD_LOGIC;
+	HPS_SD_DATA: INOUT STD_LOGIC_VECTOR(3 downto 0);
+
+	HPS_SPIM_CLK  : OUT STD_LOGIC;
+	HPS_SPIM_MISO : IN STD_LOGIC;
+	HPS_SPIM_MOSI : OUT STD_LOGIC;
+	HPS_SPIM_SS   : INOUT STD_LOGIC;
+
+	HPS_UART_RX: IN   STD_LOGIC;
+	HPS_UART_TX: OUT STD_LOGIC;
+
+	HPS_CONV_USB_N:INOUT STD_LOGIC;
+	HPS_USB_CLKOUT: IN STD_LOGIC;
+	HPS_USB_DATA:INOUT STD_LOGIC_VECTOR(7 downto 0);
+	HPS_USB_DIR: IN STD_LOGIC;
+	HPS_USB_NXT: IN STD_LOGIC;
+	HPS_USB_STP: OUT STD_LOGIC
+	);
+END soc_eq_solver_system;
+
+architecture behave of soc_eq_solver_system is
+
+signal hps_to_fpga_readdata: std_logic_vector(31 downto 0);
+signal hps_to_fpga_read: std_logic;
+signal hps_to_fpga_out_csr_address : std_logic_vector(2 downto 0) := (others => '0');
+signal hps_to_fpga_out_csr_readdata : std_logic_vector(31 downto 0);
+signal hps_to_fpga_out_csr_read: std_logic;
+
+signal sram_write_data,data_buffer: std_logic_vector(31 downto 0) := (others => '0');
+signal sram_address: std_logic_vector(7 downto 0);
+signal sram_write_enable: std_logic;
+signal sram_clken: std_logic := '1';
+signal sram_chipselect: std_logic := '1';
+
+signal address: std_logic_vector(7 downto 0):= (others => '0');
+signal row_len,col_len: integer range 0 to UINT_MAX := 0;
+signal ready: std_logic := '0';
+signal fifo_done, store_done: std_logic := '0';
+
+signal ram_fifo: ram_type:= (others => (others => 0));
+signal ram_out: ram_type:= (others => (others => 0));
+signal data_proc_done : std_logic := '0';
+signal overflow : std_logic := '0';
+BEGIN		
+	sram_clken <= '1';
+	sram_chipselect <= '1';
+	
+	-- Display 5 to indicate serial solver
+	HEX5 <= ConvertDataToSevSeg(std_logic_vector(to_unsigned(5,4)));
+	
+	-- Turn OFF other LEDs
+	HEX4 <= "1111111";
+	HEX3 <= "1111111";
+	HEX2 <= "1111111";
+
+	u0: component read_fifo_data
+			port map(
+				clk => CLOCK_50, 
+				data_ready => ready,
+				fifo_out_csr_read => hps_to_fpga_out_csr_read,
+				fifo_out_csr_readdata => hps_to_fpga_out_csr_readdata,
+				fifo_read  => hps_to_fpga_read,
+				fifo_readdata => hps_to_fpga_readdata,
+				ram => ram_fifo,
+				row_len=> row_len,
+				col_len=> col_len,
+				HEX0 => HEX0,
+				HEX1 => HEX1,
+				store_done => fifo_done
+			);
+			
+	u1: component serial_solver
+			port map (
+				ram_in => ram_fifo,
+				enable => fifo_done,
+				clk => CLOCK_50,
+				row_len =>row_len,
+				col_len =>col_len,
+				ram_out =>ram_out,
+				over_flow => overflow,
+				done => data_proc_done
+			);
+
+	u7: component write_sram_data
+			port map (
+				clk => CLOCK_50,
+				write_en => data_proc_done,
+				sram_write_data => sram_write_data,
+				sram_address => sram_address,
+				sram_write_enable => sram_write_enable,
+				ram => ram_out,
+				row_len => row_len,
+				col_len => col_len,
+				over_flow => overflow,
+				store_done => store_done
+			);
+
+	u2: component soc_eq_solver_hps
+			port map (
+				system_pll_ref_clk_clk      => CLOCK_50,
+				system_pll_ref_reset_reset  => '0',
+				onchip_sram_s1_address => sram_address,
+				onchip_sram_s1_clken => sram_clken,
+				onchip_sram_s1_chipselect => sram_chipselect,
+				onchip_sram_s1_write => sram_write_enable,
+				onchip_sram_s1_writedata => sram_write_data,
+				onchip_sram_s1_byteenable => (others => '1'),
+				clock_bridge_0_in_clk_clk => CLOCK_50,
+				fifo_hps_to_fpga_out_readdata => hps_to_fpga_readdata,
+				fifo_hps_to_fpga_out_read => hps_to_fpga_read,
+				fifo_hps_to_fpga_out_waitrequest => open,
+				fifo_hps_to_fpga_out_csr_address => hps_to_fpga_out_csr_address,
+				fifo_hps_to_fpga_out_csr_read => hps_to_fpga_out_csr_read,
+				fifo_hps_to_fpga_out_csr_writedata => open,
+				fifo_hps_to_fpga_out_csr_write => '0',
+				fifo_hps_to_fpga_out_csr_readdata => hps_to_fpga_out_csr_readdata,
+				
+				memory_mem_a		=>	HPS_DDR3_ADDR,
+				memory_mem_ba		=>	HPS_DDR3_BA,
+				memory_mem_ck		=>	HPS_DDR3_CK_P,
+				memory_mem_ck_n	=>	HPS_DDR3_CK_N,
+				memory_mem_cke		=> HPS_DDR3_CKE,
+				memory_mem_cs_n	=>	HPS_DDR3_CS_N,
+				memory_mem_ras_n	=>	HPS_DDR3_RAS_N,
+				memory_mem_cas_n	=>	HPS_DDR3_CAS_N,
+				memory_mem_we_n	=>	HPS_DDR3_WE_N,
+				memory_mem_reset_n=>	HPS_DDR3_RESET_N,
+				memory_mem_dq		=>	HPS_DDR3_DQ,
+				memory_mem_dqs		=> HPS_DDR3_DQS_P,
+				memory_mem_dqs_n	=>	HPS_DDR3_DQS_N,
+				memory_mem_odt		=> HPS_DDR3_ODT,
+				memory_mem_dm		=>	HPS_DDR3_DM,
+				memory_oct_rzqin	=>	HPS_DDR3_RZQ,
+
+				hps_io_hps_io_gpio_inst_GPIO35	=>HPS_ENET_INT_N,
+				hps_io_hps_io_emac1_inst_TX_CLK	=>HPS_ENET_GTX_CLK,
+				hps_io_hps_io_emac1_inst_TXD0	=>HPS_ENET_TX_DATA(0),
+				hps_io_hps_io_emac1_inst_TXD1	=>HPS_ENET_TX_DATA(1),
+				hps_io_hps_io_emac1_inst_TXD2	=>HPS_ENET_TX_DATA(2),
+				hps_io_hps_io_emac1_inst_TXD3	=>HPS_ENET_TX_DATA(3),
+				hps_io_hps_io_emac1_inst_RXD0	=>HPS_ENET_RX_DATA(0),
+				hps_io_hps_io_emac1_inst_MDIO	=>HPS_ENET_MDIO,
+				hps_io_hps_io_emac1_inst_MDC	=>	HPS_ENET_MDC,
+				hps_io_hps_io_emac1_inst_RX_CTL	=>HPS_ENET_RX_DV,
+				hps_io_hps_io_emac1_inst_TX_CTL	=>HPS_ENET_TX_EN,
+				hps_io_hps_io_emac1_inst_RX_CLK	=>HPS_ENET_RX_CLK,
+				hps_io_hps_io_emac1_inst_RXD1	=>HPS_ENET_RX_DATA(1),
+				hps_io_hps_io_emac1_inst_RXD2	=>HPS_ENET_RX_DATA(2),
+				hps_io_hps_io_emac1_inst_RXD3	=>HPS_ENET_RX_DATA(3),
+
+				hps_io_hps_io_qspi_inst_IO0	=>HPS_FLASH_DATA(0),
+				hps_io_hps_io_qspi_inst_IO1	=>HPS_FLASH_DATA(1),
+				hps_io_hps_io_qspi_inst_IO2	=>HPS_FLASH_DATA(2),
+				hps_io_hps_io_qspi_inst_IO3	=>HPS_FLASH_DATA(3),
+				hps_io_hps_io_qspi_inst_SS0	=>HPS_FLASH_NCSO,
+				hps_io_hps_io_qspi_inst_CLK	=>HPS_FLASH_DCLK,
+
+				hps_io_hps_io_gpio_inst_GPIO61	=>HPS_GSENSOR_INT,
+
+				--.adc_sclk                        (ADC_SCLK),
+				--.adc_cs_n                        (ADC_CS_N),
+				--.adc_dout                        (ADC_DOUT),
+				--.adc_din                         (ADC_DIN),
+
+				-- General Purpose I/O
+				hps_io_hps_io_gpio_inst_GPIO40	=>HPS_GPIO(0),
+				hps_io_hps_io_gpio_inst_GPIO41	=>HPS_GPIO(1),
+
+				-- I2C
+				hps_io_hps_io_gpio_inst_GPIO48	=>HPS_I2C_CONTROL,
+				hps_io_hps_io_i2c0_inst_SDA	=>	HPS_I2C1_SDAT,
+				hps_io_hps_io_i2c0_inst_SCL		=>HPS_I2C1_SCLK,
+				hps_io_hps_io_i2c1_inst_SDA		=>HPS_I2C2_SDAT,
+				hps_io_hps_io_i2c1_inst_SCL	=>	HPS_I2C2_SCLK,
+
+				-- Pushbutton
+				hps_io_hps_io_gpio_inst_GPIO54	=>HPS_KEY,
+
+				-- LED
+				hps_io_hps_io_gpio_inst_GPIO53	=>HPS_LED,
+
+				-- SD Card
+				hps_io_hps_io_sdio_inst_CMD	=>HPS_SD_CMD,
+				hps_io_hps_io_sdio_inst_D0	=>HPS_SD_DATA(0),
+				hps_io_hps_io_sdio_inst_D1	=>HPS_SD_DATA(1),
+				hps_io_hps_io_sdio_inst_CLK	=>HPS_SD_CLK,
+				hps_io_hps_io_sdio_inst_D2	=>HPS_SD_DATA(2),
+				hps_io_hps_io_sdio_inst_D3	=>HPS_SD_DATA(3),
+
+				-- SPI
+				hps_io_hps_io_spim1_inst_CLK		=>HPS_SPIM_CLK,
+				hps_io_hps_io_spim1_inst_MOSI	=>HPS_SPIM_MOSI,
+				hps_io_hps_io_spim1_inst_MISO	=>HPS_SPIM_MISO,
+				hps_io_hps_io_spim1_inst_SS0		=>HPS_SPIM_SS,
+
+				-- UART
+				hps_io_hps_io_uart0_inst_RX	=>HPS_UART_RX,
+				hps_io_hps_io_uart0_inst_TX	=>HPS_UART_TX,
+
+				-- USB
+				hps_io_hps_io_gpio_inst_GPIO09	=>HPS_CONV_USB_N,
+				hps_io_hps_io_usb1_inst_D0		=>HPS_USB_DATA(0),
+				hps_io_hps_io_usb1_inst_D1		=>HPS_USB_DATA(1),
+				hps_io_hps_io_usb1_inst_D2		=>HPS_USB_DATA(2),
+				hps_io_hps_io_usb1_inst_D3		=>HPS_USB_DATA(3),
+				hps_io_hps_io_usb1_inst_D4		=>HPS_USB_DATA(4),
+				hps_io_hps_io_usb1_inst_D5		=>HPS_USB_DATA(5),
+				hps_io_hps_io_usb1_inst_D6		=>HPS_USB_DATA(6),
+				hps_io_hps_io_usb1_inst_D7		=>HPS_USB_DATA(7),
+				hps_io_hps_io_usb1_inst_CLK		=>HPS_USB_CLKOUT,
+				hps_io_hps_io_usb1_inst_STP		=>HPS_USB_STP,
+				hps_io_hps_io_usb1_inst_DIR		=>HPS_USB_DIR,
+				hps_io_hps_io_usb1_inst_NXT      =>HPS_USB_NXT,
+				ready_external_connection_export =>ready		
+			);
+END behave;
