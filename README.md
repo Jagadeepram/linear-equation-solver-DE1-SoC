@@ -1,5 +1,5 @@
 # linear_equation_solver_DE1_SoC
-Design Accelerate Linear Equation System Solver on DE1-SoC development Board
+Design and Accelerate Linear Equation System Solver on DE1-SoC development Board
 
 A set of linear integer equations are solved and accelerated on DE1-SoC board. 
 The solver is designed as software solver using resources only from MCU and as hardware solvers also
